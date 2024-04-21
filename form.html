@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <?!=include('form.css');?>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,500,0,0" />
+</head>
+
+<body>
+    <form id="mG61Hd"
+        action="https://docs.google.com/forms/u/0/d/e/実際はGoogleFormのアドレス名です/formResponse"
+        method="POST">
+        <!-- target="hidden_iframe" onsubmit="submitted=true;" -->
+
+        <div class="block">
+            <h1>仕事登録フォーム</h1>
+            <p>仕事登録用</p>
+            <p class="required">*は必須項目です</p>
+        </div>
+
+        <!-- 日付 -->
+        <div class="block date">
+            <!-- 日付データ格納用 -->
+            <input type="hidden" id="calendar_year" name="entry.656156097_year" value="">
+            <input type="hidden" id="calendar_month" name="entry.656156097_month" value="">
+            <input type="hidden" id="calendar_day" name="entry.656156097_day" value="">
+            <!-- 以下表示部分 -->
+            <label for="calendar" class="block-title required">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+                日付</label>
+            <input name="calendar" type="date" id="calendar">
+            <div class="hidden err-msg">
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+                <p>日付を正しく入力してください</p>
+            </div>
+        </div>
+
+        <!-- 会社名 -->
+        <div class="block">
+            <div class="company-name">
+                <!-- 会社名データ格納用 -->
+                <input type="hidden" id="company" name="entry.1378850775" value="">
+                <!-- 以下表示部分 -->
+                <label for="company-name" class="block-title required">
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+                    会社名</label>
+                <select name="company-name" id="company-name" required>
+                    <option value="">選択してください</option>
+                </select>
+                <div class="hidden err-msg">
+                    <span class="material-symbols-outlined">
+                        error
+                    </span>
+                    <p>会社名を選択してください</p>
+                </div>
+            </div>
+
+            <div class="company-name-others">
+                <!-- 会社名その他データ格納用 -->
+                <input type="hidden" id="company-others" name="entry.405300846" value="">
+                <!-- 以下表示部分 -->
+                <label for="company-name-others" class="block-title">
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+                    会社名その他</label>
+                <input type="text" name="company-name-others" id="company-name-others" value="">
+            </div>
+        </div>
+
+        <!-- 番組名 -->
+        <div class="block">
+            <div class="program-name">
+                <!-- 番組名データ格納用 -->
+                <input type="hidden" id="program" name="entry.664952329" value="">
+                <!-- 以下表示部分 -->
+                <label for="program-name" class="block-title required">
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+                    番組名</label>
+                <select name="program-name" id="program-name" required>
+                    <option value="">選択してください</option>
+                </select>
+                <div class="hidden err-msg">
+                    <span class="material-symbols-outlined">
+                        error
+                    </span>
+                    <p>番組名を選択してください</p>
+                </div>
+            </div>
+
+            <div class="program-name-other">
+                <!-- 番組名その他データ格納用 -->
+                <input type="hidden" id="program-other" name="entry.1097843358" value="">
+                <!-- 以下表示部分 -->
+                <label for="program-name-other" class="block-title">
+                    <span class="material-symbols-outlined">
+                        schedule
+                    </span>
+                    番組名その他</label>
+                <input name="program-name-other" type="text" id="program-name-other">
+            </div>
+        </div>
+
+        <!-- 内容 -->
+        <div class="block job-description">
+            <!-- 内容データ格納用 -->
+            <input type="hidden" id="description" name="entry.380703603" value="">
+            <!-- 以下表示部分 -->
+            <label for="job-description" class="block-title required">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+                内容</label>
+            <input name="job-description" type="text" id="job-description">
+            <div class="hidden err-msg">
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+                <p>内容を入力してください</p>
+            </div>
+        </div>
+
+        <!-- 点数 -->
+        <div class="block order-num">
+            <!-- 点数データ格納用 -->
+            <input type="hidden" id="order" name="entry.391293459" value="">
+            <!-- 以下表示部分 -->
+            <label for="order-num" class="block-title required">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+                点数</label>
+            <input name="order-num" type="number" id="order-num">
+            <div class="hidden err-msg">
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+                <p>点数を入力してください</p>
+            </div>
+        </div>
+
+        <!-- 単価 -->
+        <div class="block order-price">
+            <!-- 単価データ格納用 -->
+            <input type="hidden" id="price" name="entry.1640618989" value="">
+            <!-- 以下表示部分 -->
+            <label for="order-price" class="block-title required">
+                <span class="material-symbols-outlined">
+                    calendar_month
+                </span>
+                単価</label>
+            <input name="order-price" type="number" id="order-price">
+            <div class="hidden err-msg">
+                <span class="material-symbols-outlined">
+                    error
+                </span>
+                <p>点数を入力してください</p>
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <input type="submit" class="submit" value="送信">
+        </div>
+
+        <!-- 送信後の画面 -->
+        <div class="end-message block">
+            <h1>記録完了しました</h1>
+            <div class="flex">
+                <a href="https://docs.google.com/spreadsheets/d/<!-- id -->/edit?usp=sharing"
+                    target="_blank">スプレッドシートを開く
+                    <span class="material-symbols-outlined">
+                        open_in_new
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="false-message block err-msg">
+            <span class="material-symbols-outlined">
+                error
+            </span>
+            <p>送信失敗です</p>
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // select項目
+            const selectProgram = [
+                "◯◯番組",
+                "△△雑誌",
+                "□□イラスト",
+                "✖️✖️テレビ",
+                "◯◯番組",
+                "△△雑誌",
+                "□□イラスト",
+                "✖️✖️テレビ",
+                "◯◯番組",
+                "△△雑誌",
+                "□□イラスト"
+            ];
+
+            const selectCompany = [
+                "株式会社テレビ●●",
+                "株式会社●●テレビジョン",
+                "株式会社✖️✖️テレビ",
+                "株式会社□□社",
+                "株式会社△△社",
+                "●●社",
+                "株式会社□□□"
+            ];
+            const comName = document.querySelector('#company-name');
+            let comOptHtml = "";
+            for (let val of selectCompany) {
+                comOptHtml += `<option>${val}</option>`;
+            }
+            comName.insertAdjacentHTML('beforeend', comOptHtml);
+
+
+            const progName = document.querySelector('#program-name');
+            let progOptHtml = "";
+            for (let val of selectProgram) {
+                progOptHtml += `<option>${val}</option>`;
+            }
+            progName.insertAdjacentHTML('beforeend', progOptHtml);
+
+            //inputの値が入力されたらエラーメッセージを非表示
+            $('form').on('input', function (e) {
+                if ($('#calendar').val() !== '') {
+                    $('.date').removeClass('err-msg-border');
+                    $('.date > .err-msg').addClass('hidden');
+                }
+                if ($('#company-name').val() !== '') {
+                    $('.company-name').removeClass('err-msg-border');
+                    $('.company-name > .err-msg').addClass('hidden');
+                }
+                if ($('#program-name').val() !== '') {
+                    $('.program-name').removeClass('err-msg-border');
+                    $('.program-name > .err-msg').addClass('hidden');
+                }
+                if ($('#job-description').val() !== '') {
+                    $('.job-description').removeClass('err-msg-border');
+                    $('.job-description > .err-msg').addClass('hidden');
+                }
+                if ($('#order-num').val() !== '') {
+                    $('.order-num').removeClass('err-msg-border');
+                    $('.order-num > .err-msg').addClass('hidden');
+                }
+                if ($('#order-price').val() !== '') {
+                    $('.order-price').removeClass('err-msg-border');
+                    $('.order-price > .err-msg').addClass('hidden');
+                }
+            })
+            $('form').on('submit', function (e) {
+                let errorFlag = false;
+                // 日付チェック
+                if ($('#calendar_year').val() === '' || $('#calendar_month').val() === '' || $('#calendar_day').val() === '') {
+                    errorFlag = true;
+                    $('.date').addClass('err-msg-border');
+                    $('.date > .err-msg').removeClass('hidden');
+
+                } else {
+                    $('.date').removeClass('err-msg-border');
+                    $('.date > .err-msg').addClass('hidden');
+                }
+                // 会社名チェック
+                if ($('#company-name').val() === '') {
+                    errorFlag = true;
+                    $('.company-name').addClass('err-msg-border');
+                    $('.company-name > .err-msg').removeClass('hidden');
+                } else {
+                    $('.company-name').removeClass('err-msg-border');
+                    $('.company-name > .err-msg').addClass('hidden');
+                }
+                // 番組名チェック
+                if ($('#program-name').val() === '') {
+                    errorFlag = true;
+                    $('.program-name').addClass('err-msg-border');
+                    $('.program-name > .err-msg').removeClass('hidden');
+                } else {
+                    $('.program-name').removeClass('err-msg-border');
+                    $('.program-name > .err-msg').addClass('hidden');
+                }
+                // 最終エラー結果
+                if (errorFlag) {
+                    e.preventDefault();
+                    return;
+                }
+                // ajax
+                var formData = $('form').serialize();
+                $.ajax({
+                    url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScBHUffnxqYcaAJjieEkTFilDYqj0Bl21e5KMhBas-KllOPyw/formResponse",
+                    data: formData,
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            $(".end-message").slideDown();
+                            $(".submit").fadeOut();
+                            //window.location.href = "thanks.html";
+                        },
+                        200: function () {
+                            $(".false-message").slideDown();
+                        }
+                    }
+                });
+                e.preventDefault();
+            })
+            //「勤務日」項目が変更されたときに対応するhidden項目の値も変更
+            $('#calendar').on('change', function (e) {
+                if ($(this).val() != '') {
+                    $(this).css('color', '#000');
+                    let calendar = $(this).val();
+                    let dt = calendar.split('-');
+                    $('#calendar_year').val(dt[0]);
+                    $('#calendar_month').val(dt[1]);
+                    $('#calendar_day').val(dt[2]);
+                } else {
+                    $(this).css('color', '#999');
+                    $('#calendar_year').val('');
+                    $('#calendar_month').val('');
+                    $('#calendar_day').val('');
+                }
+            });
+            //「会社名」項目が変更されたときに対応するhidden項目の値も変更
+            $('#company-name').on('change', function (e) {
+                if ($(this).val() != '') {
+                    $(this).css('color', '#000');
+                    let time = $(this).val();
+                    let dt = time.split(':');
+                    $('#company-name').val(dt[0]);
+                } else {
+                    $(this).css('color', '#999');
+                    $('#company-name').val('');
+                }
+            });
+            //「番組名」項目が変更されたときに対応するhidden項目の値も変更
+            $('#program-name').on('change', function (e) {
+                if ($(this).val() != '') {
+                    $(this).css('color', '#000');
+                    let time = $(this).val();
+                    let dt = time.split(':');
+                    $('#program-name').val(dt[0]);
+                } else {
+                    $(this).css('color', '#999');
+                    $('#program-name').val('');
+                }
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
